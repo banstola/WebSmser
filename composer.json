@@ -1,0 +1,7 @@
+{
+    "require": {
+        "twbs/bootstrap": "^3.3",
+        "twilio/sdk": "^4.10",
+        "symfony/yaml": "^3.0"
+    }
+}
