@@ -5,13 +5,17 @@
         <link rel="stylesheet" href="css/app.css" type="text/css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
         <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        <script src="js/intlTelInput.min.js"></script>
+        <link rel="stylesheet" href="css/intlTelInput.css" type="text/css">
         <script src="js/js.js"></script>
         <title>Web Sms Client</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
+        
         <div class="container top-margin">
+        
             <ul class="nav nav-tabs">
                 <li class="active"><a data-toggle="tab" href="#send-sms">Create and Send Sms</a></li>
                 <li><a data-toggle="tab" href="#check-sms">Check SMS</a></li>
@@ -34,13 +38,39 @@
                 <div id="check-sms" class="tab-pane fade">
                     <div class="list-group">
                         <h2>You have sms from following numbers</h2>
-                        <a href="#" class="view-message list-group-item active">+358407771079</a>
-                        <a href="#" class="view-message list-group-item">+35855000</a>
-                        <a href="#" class="view-message list-group-item">+3580909</a>
+                        <a href="#" data-message="Code : 001" class="view-message list-group-item">+358407771079</a>
+                        <a href="#" data-message="Code : 002" class="view-message list-group-item">+358550009898</a>
+                        <a href="#" data-message="Code : 003" class="view-message list-group-item">+358090998998</a>
+                    </div>
+                   
+                    <div class="col-md-6 show-message-details alert alert-success">
+                        
+                        
                     </div>
                 </div>
             </div>
         </div>
-
+          <script>
+    $("#phone-number").intlTelInput({
+       //allowDropdown: false,
+      // autoHideDialCode: false,
+      // autoPlaceholder: false,
+      // dropdownContainer: "body",
+      // excludeCountries: ["us"],
+      // geoIpLookup: function(callback) {
+      //   $.get("http://ipinfo.io", function() {}, "jsonp").always(function(resp) {
+      //     var countryCode = (resp && resp.country) ? resp.country : "";
+      //     callback(countryCode);
+      //   });
+      // },
+      // initialCountry: "auto",
+      // nationalMode: false,
+      // numberType: "MOBILE",
+       onlyCountries: ['us'],
+      // preferredCountries: ['cn', 'jp'],
+      // separateDialCode: true,
+      utilsScript: "js/utils.js"
+    });
+  </script>
     </body>
 </html>

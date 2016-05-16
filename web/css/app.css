@@ -1,3 +1,17 @@
 .top-margin{
     margin-top: 20px;
 }
+
+.show-message-details,.view-message{
+    width: 50%;
+}
+
+.show-message-details{
+    display: none;
+    
+}
+
+.result{
+   
+    
+}
