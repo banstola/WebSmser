@@ -5,7 +5,6 @@
 nbproject/
 build/
 nbbuild/
-dist/
 config/dist/sms_creds.yml
 nbdist/
 nbactions.xml
