@@ -1,0 +1,6 @@
+#Provide your creds and sender number and copy this file to dist folder
+creds:
+    account_id: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX 
+    auth_token: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX 
+    sender: +1234567890
+    
