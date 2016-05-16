@@ -6,7 +6,7 @@ nbproject/
 build/
 nbbuild/
 dist/
-config/
+config/dist/sms_creds.yml
 nbdist/
 nbactions.xml
 .nb-gradle/
