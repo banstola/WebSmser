@@ -18,7 +18,7 @@
         
             <ul class="nav nav-tabs">
                 <li class="active"><a data-toggle="tab" href="#send-sms">Create and Send Sms</a></li>
-                <li><a data-toggle="tab" href="#check-sms">Check SMS</a></li>
+                <li id="get-sms"><a  data-toggle="tab" href="#check-sms">Check SMS</a></li>
             </ul>
 
             <div class="tab-content">
@@ -30,17 +30,22 @@
 
                             <label for="sms-message">Message</label>
                             <textarea rows="5" id="sms-message" class="form-control"></textarea>
+                            
+
                         </div>
                         <button  id="send-sms-btn" class="btn btn-success">Send Sms</button>
+                               <div id="result-panel" class="alert"></div>
                     </form>
 
                 </div>
                 <div id="check-sms" class="tab-pane fade">
                     <div class="list-group">
-                        <h2>You have sms from following numbers</h2>
-                        <a href="#" data-message="Code : 001" class="view-message list-group-item">+358407771079</a>
-                        <a href="#" data-message="Code : 002" class="view-message list-group-item">+358550009898</a>
-                        <a href="#" data-message="Code : 003" class="view-message list-group-item">+358090998998</a>
+                        <div id="inbox" class="row">
+                           
+                            <div id="to-number" class="col-xs-2 alert alert-success">From</div>
+                            <div id="message-body" class="col-xs-6 col-xs-offset-1 alert alert-success">Message</div>
+                        </div>
+                      
                     </div>
                    
                     <div class="col-md-6 show-message-details alert alert-success">
@@ -49,10 +54,12 @@
                     </div>
                 </div>
             </div>
+            
+     
         </div>
           <script>
     $("#phone-number").intlTelInput({
-       //allowDropdown: false,
+       allowDropdown: false,
       // autoHideDialCode: false,
       // autoPlaceholder: false,
       // dropdownContainer: "body",

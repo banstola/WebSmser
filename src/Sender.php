@@ -1,15 +1,15 @@
 <?php
 
-namespace WebSmser\src\SendSms;
-
-require_once __DIR__ . '/../vendor/autoload.php';
+    require __DIR__ . '/../vendor/autoload.php';
 
 use Symfony\Component\Yaml\Yaml;
 
 /**
  * A class for sending SMS using Twilio API. It provides with all the methods to set Twilio authentication and token. 
  */
-class SendSms {
+class Sender {
+
+    
 
     /** Twilio client for API access**/
     private $client;
@@ -45,13 +45,14 @@ class SendSms {
         $this->client=new Services_Twilio(  $this->accountId,$this->authToken);
     }
     
-    private function getClient(){
+    public function getClient(){
         return $this->client;
     }
 
     public function __construct() {
         $this->setConfiguration();
         $this->setClient();
+        
     }
 
     /**
